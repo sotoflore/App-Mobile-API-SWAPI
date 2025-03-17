@@ -147,6 +147,48 @@ Con **Metro** en ejecución, abre una nueva terminal desde la raíz de tu proyec
     # Using npm
     npm run ios
     ```
+
+## Uso de la App Mobile
+
+### Pantalla de inicio - Peoples
+
+![screen-people](https://github.com/sotoflore/App-Mobile-API-SWAPI/blob/main/screenImg/screen-people.png)
+
+Para buscar un personaje solo tienes que escribir el nombre en la barra de búsqueda y luego presionar en buscar.
+Si el personaje existe se mostrarán los resultados:
+
+![screen-people-search](https://github.com/sotoflore/App-Mobile-API-SWAPI/blob/main/screenImg/screen-people-search.png)
+
+de lo contrario te saldrá un mensaje como esto:
+
+![screen-people-search-no-data](https://github.com/sotoflore/App-Mobile-API-SWAPI/blob/main/screenImg/screen-people-search-no-data.png)
+
+Si deseas ver el detalle del personaje, solo presiona en **"ver mas detalles"**, esta pantalla te mostrará mas detalles del personaje:
+![screen-people-details](https://github.com/sotoflore/App-Mobile-API-SWAPI/blob/main/screenImg/screen-people-details.png)
+
+Para navegar entre pantallas, solo tienes que seleccionar en la barra de menú el que deseas ver.
+
+### Pantalla de inicio - Peoples
+![screen-film](https://github.com/sotoflore/App-Mobile-API-SWAPI/blob/main/screenImg/screen-films.png)
+
+### Pantalla de inicio - Peoples
+![screen-planets](https://github.com/sotoflore/App-Mobile-API-SWAPI/blob/main/screenImg/screen-planets.png)
+
+## Modo dark
+Para cambiar el tema de claro a oscuro, selecciona el ícono de la parte superior derecha.
+Este te mostrará un alert donde te pedirá elegir el modo de la aplicación, elige el modo oscuro.
+![screen-mode-theme](https://github.com/sotoflore/App-Mobile-API-SWAPI/blob/main/screenImg/screen-mode-theme.png)
+
+Cuando selecciones el modo oscuro se mostrará de esta manera las pantallas:
+Screen Peoples
+![screen-people-dark](https://github.com/sotoflore/App-Mobile-API-SWAPI/blob/main/screenImg/screen-people-dark.png)
+
+Screen Films
+![screen-films-dark](https://github.com/sotoflore/App-Mobile-API-SWAPI/blob/main/screenImg/screen-films-dark.png)
+
+Screen Planets
+![screen-planets-dark](https://github.com/sotoflore/App-Mobile-API-SWAPI/blob/main/screenImg/screen-planets-dark.png)
+
 ## Mapper de los Atributos de inglés a español
 
 ### Peoples: Atributos en español
@@ -461,6 +503,3 @@ Con **Metro** en ejecución, abre una nueva terminal desde la raíz de tu proyec
     ]
 }
 ```
-## Uso de la App Mobile
-
-## Modo dark
