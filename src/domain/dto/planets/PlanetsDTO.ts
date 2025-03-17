@@ -1,7 +1,4 @@
-export interface Planets {
-    count: number;
-    next: string;
-    previous: null;
+export interface PlanetsDTO {
     results: Result[];
 }
 

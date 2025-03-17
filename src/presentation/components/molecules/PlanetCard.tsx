@@ -1,40 +1,54 @@
-import { View, Text, StyleSheet } from 'react-native'
-import React from 'react'
-import { Result } from '../../../domain/dto/PlanetsDTO'
+import { View, Text, StyleSheet } from 'react-native';
+import { ResultPlanet } from '../../../domain/dto/planets/PlanetsSpanishDTO'
+import { useThemeContext } from '../../context/ThemeContext';
+import { Colors } from '../../../domain/constants/colors.style';
+import TextDetail from './TextDetail';
 
-interface PlanetsCardPros{
-    planet:Result
+interface PlanetsCardPros {
+    planet: ResultPlanet
 }
 
 const PlanetCard = ({ planet }: PlanetsCardPros) => {
-  return (
-      <View style={styles.card}>
-          <Text style={styles.name}>{planet.name}</Text>
-          <Text>Climate: {planet.climate}</Text>
-          <Text>Terrain: {planet.terrain}</Text>
-          <Text>Population: {planet.population}</Text>
-          <Text>Population: {planet.diameter}</Text>
 
-          <Text>Population: {planet.orbital_period}</Text>
-          <Text>Population: {planet.rotation_period}</Text>
-          <Text>Population: {planet.gravity}</Text>
-          <Text>Population: {planet.terrain}</Text>
-          <Text>Population: {planet.surface_water}</Text>
-      </View>
-  )
+    const { theme } = useThemeContext();
+
+    return (
+        <View style={[styles.container, theme === 'dark' && styles.darkContainer]}>
+            <Text style={[styles.name, theme === 'dark' && styles.darkName]}>{planet.nombre}</Text>
+            <TextDetail text="Clima" value={planet.clima} />
+            <TextDetail text="Terreno" value={planet.terreno} />
+            <TextDetail text="Población" value={planet.poblacion} />
+            <TextDetail text="Diamentro" value={planet.diametro} />
+            <TextDetail text="Periodo Orbital" value={planet.periodo_orbital} />
+            <TextDetail text="Periodo de rotación" value={planet.periodo_rotacion} />
+            <TextDetail text="Gravedad" value={planet.gravedad} />
+            <TextDetail text="Agua superficial" value={planet.agua_superficial} />
+        </View>
+    )
 }
 
 const styles = StyleSheet.create({
-    card: {
-        padding: 15,
-        borderRadius: 10,
-        marginVertical: 8,
+    container: {
+        padding: 16,
+        marginBottom: 15,
+        backgroundColor: Colors.light.colorCard,
+        borderRadius: 8,
+        borderWidth: 3,
+        borderColor: Colors.light.borderColor,
+    },
+    darkContainer: {
+        backgroundColor: Colors.dark.colorCard,
+        borderWidth: 0
     },
     name: {
-        fontSize: 18,
+        fontSize: 23,
         fontWeight: 'bold',
-        color: '#f9a825',
-    }
+        color: Colors.light.text,
+        marginBottom: 10
+    },
+    darkName: {
+        color: Colors.dark.secondary,
+    },
 });
 
 export default PlanetCard

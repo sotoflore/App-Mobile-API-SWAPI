@@ -1,9 +1,9 @@
-import { Films } from "../dto/FilmsDTO";
-import { People } from "../dto/PeopleDTO";
-import { Planets } from "../dto/PlanetsDTO";
+import { FilmsSpanishDTO } from "../dto/films/FilmsSpanishDTO";
+import { PeopleSpanishDTO } from "../dto/peoples/PeopleSpanishDTO";
+import { PlanetsSpanishDTO } from "../dto/planets/PlanetsSpanishDTO";
 
-export interface IApi{
-    getPeoples(): Promise<People>;
-    getPlanets(): Promise<Planets>;
-    getFilms(): Promise<Films>;
+export interface IApi {
+    getPeoples(): Promise<PeopleSpanishDTO>;
+    getPlanets(): Promise<PlanetsSpanishDTO>;
+    getFilms(): Promise<FilmsSpanishDTO>;
 }

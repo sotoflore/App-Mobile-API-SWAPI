@@ -1,4 +1,4 @@
-export interface People {
+export interface PeopleDTO {
     results: Result[];
 }
 

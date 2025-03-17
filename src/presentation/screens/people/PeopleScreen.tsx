@@ -1,11 +1,11 @@
-import { FlatList} from 'react-native'
-import { usePeoples } from '../hooks/usePeople'
-import PersonCard from '../components/molecules/PersonCard';
-import LayoutScreen from '../components/templates/LayoutScreen';
-import Loading from '../components/atoms/Loading';
-import TextByNoData from '../components/atoms/TextByNoData';
-import { useSearch } from '../hooks/useSearch';
-import SearchCharacter from '../components/molecules/SearchCharacter';
+import { FlatList } from 'react-native'
+import { usePeoples } from '../../hooks/usePeople'
+import LayoutScreen from '../../components/templates/LayoutScreen';
+import Loading from '../../components/molecules/Loading';
+import TextByNoData from '../../components/atoms/TextByNoData';
+import { useSearch } from '../../hooks/useSearch';
+import SearchCharacter from '../../components/molecules/SearchCharacter';
+import PeopleCard from '../../components/molecules/PeopleCard';
 
 const PeopleScreen = () => {
 
@@ -29,7 +29,7 @@ const PeopleScreen = () => {
     }
 
     const filteredPeople = data.results.filter(person =>
-        person.name.toLowerCase().includes(searchQuery.toLowerCase())
+        person.nombre.toLowerCase().includes(searchQuery.toLowerCase())
     );
 
     return (
@@ -44,8 +44,8 @@ const PeopleScreen = () => {
             ) : (
                 <FlatList
                     data={filteredPeople}
-                    keyExtractor={(item) => item.name}
-                    renderItem={({ item }) => <PersonCard person={item} />}
+                    keyExtractor={(item) => item.nombre}
+                    renderItem={({ item }) => <PeopleCard people={item} />}
                     showsVerticalScrollIndicator={false}
                 />
             )}

@@ -1,37 +1,49 @@
 import { View, Text, StyleSheet } from 'react-native'
-import React from 'react'
-import { Result } from '../../../domain/dto/FilmsDTO';
+import { ResultFilm } from '../../../domain/dto/films/FilmsSpanishDTO';
+import { Colors } from '../../../domain/constants/colors.style';
+import { useThemeContext } from '../../context/ThemeContext';
+import TextDetail from './TextDetail';
 
 interface FilmsCardProps {
-    film: Result;
+    film: ResultFilm;
 }
 
 const FilmsCard = ({ film }: FilmsCardProps) => {
-  return (
-      <View style={styles.itemContainer}>
-          <Text style={styles.title}>{film.title}</Text>
-          <Text style={styles.detail}>Episode: {film.episode_id}</Text>
-          <Text style={styles.detail}>Director: {film.director}</Text>
-          <Text style={styles.detail}>Release Date: {film.planets}</Text>
-          <Text style={styles.detail}>Opening Crawl: {film.opening_crawl}</Text>
-      </View>
-  )
+
+    const { theme } = useThemeContext();
+
+    return (
+        <View style={[styles.itemContainer, theme === 'dark' && styles.darkItemContainer]}>
+            <Text style={[styles.title, theme === 'dark' && styles.darkTitle]}>{film.titulo}</Text>
+            <TextDetail text='Episodio' value={film.id_episodio.toString()} />
+            <TextDetail text='Director' value={film.director} />
+            <TextDetail text='Productor' value={film.productor} />
+            <TextDetail text='Fecha de lanzamiento' value={film.fecha_lanzamiento} />
+            <TextDetail text='Textos iniciales' value={film.texto_inicial} />
+        </View>
+    )
 }
 
 const styles = StyleSheet.create({
     itemContainer: {
         padding: 16,
-        borderBottomWidth: 1,
-        borderBottomColor: '#ccc',
+        marginBottom: 15,
+        backgroundColor: Colors.light.colorCard,
+        borderRadius: 8,
+        borderWidth: 3,
+        borderColor: Colors.light.borderColor,
+    },
+    darkItemContainer: {
+        backgroundColor: Colors.dark.colorCard,
+        borderWidth: 0
     },
     title: {
-        fontSize: 18,
+        fontSize: 23,
         fontWeight: 'bold',
         marginBottom: 8,
     },
-    detail: {
-        fontSize: 14,
-        marginBottom: 4,
-    },
+    darkTitle: {
+        color: Colors.light.secondary
+    }
 });
 export default FilmsCard;

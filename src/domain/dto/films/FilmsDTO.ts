@@ -1,4 +1,4 @@
-export interface Films{
+export interface FilmsDTO{
     results: Result[];
 }
 
