@@ -150,7 +150,7 @@ Con **Metro** en ejecución, abre una nueva terminal desde la raíz de tu proyec
 
 ## Uso de la App Mobile
 
-### Pantalla de inicio - Peoples
+### Pantalla de inicio - Personajes
 
 ![screen-people](https://github.com/sotoflore/App-Mobile-API-SWAPI/blob/main/screenImg/screen-people.png)
 
@@ -168,10 +168,10 @@ Si deseas ver el detalle del personaje, solo presiona en **"ver mas detalles"**,
 
 Para navegar entre pantallas, solo tienes que seleccionar en la barra de menú el que deseas ver.
 
-### Pantalla de inicio - Peoples
+### Pantalla Peliculas
 ![screen-film](https://github.com/sotoflore/App-Mobile-API-SWAPI/blob/main/screenImg/screen-films.png)
 
-### Pantalla de inicio - Peoples
+### Pantalla de planetas
 ![screen-planets](https://github.com/sotoflore/App-Mobile-API-SWAPI/blob/main/screenImg/screen-planets.png)
 
 ## Modo dark
